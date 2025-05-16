@@ -1,0 +1,13 @@
+{ config, pkgs, ... }:
+
+{
+
+  # Enable Zsh shell
+  programs.zsh.enable = true;
+
+  # Enable nix command and flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes"];
+
+  # Allows unfree softwares like discord, steam, etc.
+  nixpkgs.config.allowUnfree = true;
+}
